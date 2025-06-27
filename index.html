@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lights Out Game</title>
+    <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./Scripts/script.js"></script>
+</head>
+<body>
+
+<div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="ModalTitle">Gameplay</h3>
+            </div>
+            <div class="modal-body">
+                <p>Click on any light to turn it and its four immediate neighbors on or off.</p>
+                <p><strong>Win the game by turning off all the lights!</strong></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" style="width: 15%" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row area">
+        <div class="col-md-7 col-lg-7">
+            <div class="row text-center">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="row text-center">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="row text-center">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="row text-center">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="row text-center">
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="col-sm-offset-2 col-sm-8 col-md-offset-0 col-md-4 col-lg-4">
+            <h1 class="text-center game-title"">Lights Out Game</h3>
+            <div class="well panel">
+                <label>Time: <span id="time">0:00</span></label><br>
+                <label>Steps: <span id="steps">0</span></label>
+            </div>
+            <div class="well panel">
+                <button class="btn btn-primary" type="submit" id="reset">RESET</button>
+                <button class="btn btn-primary" type="submit" id="rand">RANDOM</button>
+                <button class="btn btn-warning" type="button" data-toggle="modal" data-target="#infoModal">HELP</button>
+            </div>
+        </div>
+    </div>
+    <div class="winner-panel">
+        <div class="msg">
+            <h3>You are win!</h3>
+            <button type="button" class="btn btn-primary" id="new_game">New game!</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
