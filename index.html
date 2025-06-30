@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,84 +11,98 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="./Scripts/script.js"></script>
 </head>
+
 <body>
 
-<div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title" id="ModalTitle">Gameplay</h3>
-            </div>
-            <div class="modal-body">
-                <p>Click on any light to turn it and its four immediate neighbors on or off.</p>
-                <p><strong>Win the game by turning off all the lights!</strong></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" style="width: 15%" data-dismiss="modal">Close</button>
+    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="ModalTitle">Gameplay</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Click on any light to turn it and its four immediate neighbors on or off.</p>
+                    <p><strong>Win the game by turning off all the lights!</strong></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" style="width: 15%" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="container">
-    <div class="row area">
-        <div class="col-md-7 col-lg-7">
-            <div class="row text-center">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
+    <div class="container">
+        <div class="row area">
+            <div class="col-md-6 col-lg-7">
+                <div class="row text-center">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+                <div class="row text-center">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+                <div class="row text-center">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+                <div class="row text-center">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+                <div class="row text-center">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
             </div>
-            <div class="row text-center">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-            </div>
-            <div class="row text-center">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-            </div>
-            <div class="row text-center">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-            </div>
-            <div class="row text-center">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
+            <div class="col-sm-offset-2 col-sm-8 col-md-5 col-md-offset-1 col-lg-offset-0 col-lg-4">
+                <img src="./Images/Lights-Out-Game.png" class="game-title" width="350">
+                <div class="well well-sm">
+                    <h4 class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor" class="bi bi-clock"
+                            viewBox="0 0 18 18">
+                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+                        </svg>Time: <span class="label label-default padding-3" id="time">0:00</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" fill="currentColor"
+                            class="bi bi-arrow-right-circle" viewBox="0 0 18 18">
+                            <path fill-rule="evenodd"
+                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                        </svg>Steps: <span class="label label-default" id="steps">0</span>
+                    </h4>
+                </div>
+                <div class="well">
+                    <button class="btn btn-primary" type="submit" id="reset">RESET</button>
+                    <button class="btn btn-primary" type="submit" id="rand">RANDOM</button>
+                    <button class="btn btn-warning" type="button" data-toggle="modal"
+                        data-target="#infoModal">HELP</button>
+                </div>
             </div>
         </div>
-        <div class="col-sm-offset-2 col-sm-8 col-md-offset-0 col-md-4 col-lg-4">
-            <h1 class="text-center game-title"">Lights Out Game</h3>
-            <div class="well panel">
-                <label>Time: <span id="time">0:00</span></label><br>
-                <label>Steps: <span id="steps">0</span></label>
-            </div>
-            <div class="well panel">
-                <button class="btn btn-primary" type="submit" id="reset">RESET</button>
-                <button class="btn btn-primary" type="submit" id="rand">RANDOM</button>
-                <button class="btn btn-warning" type="button" data-toggle="modal" data-target="#infoModal">HELP</button>
+        <div class="winner-panel">
+            <div class="msg">
+                <h3>You are win!</h3>
+                <button type="button" class="btn btn-primary" id="new_game">New game!</button>
             </div>
         </div>
     </div>
-    <div class="winner-panel">
-        <div class="msg">
-            <h3>You are win!</h3>
-            <button type="button" class="btn btn-primary" id="new_game">New game!</button>
-        </div>
-    </div>
-</div>
 
 </body>
+
 </html>

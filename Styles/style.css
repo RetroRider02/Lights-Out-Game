@@ -4,16 +4,28 @@
 }
 
 body {
-    background: #2A7B9B;
-    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    background: linear-gradient(90deg, #ffe59e 0%, #c67700 100%);
 }
 
 .game-title {
-    margin-bottom: 35px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 35px;
-    font-weight: bold;
-    font-style: italic;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.container {
+    height: 100%;
+}
+
+h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+h4 svg {
+    flex-shrink: 0;
 }
 
 .container {
@@ -26,26 +38,26 @@ body {
     width: 7rem;
     height: 7rem;
     margin: 10px;
-    border: 2px solid #333;
+    border: 2px solid #ffffff;
     border-radius: 60px;
     transition: .05s;
-    box-shadow: 0 5px 10px 1px gray;
+    box-shadow: 0 10px 15px 1px #333;
 }
 
 .circle:hover {
     cursor: pointer;
     border: none;
     transition: .05s;
-    box-shadow: 0 0 0 5px #BF7200;
+    box-shadow: 0 0 0 5px indigo;
 }
 
 .on {
-    background-color: #BF7200;
+    background-color: indigo;
 }
 
 .on:hover {
     border: none;
-    box-shadow: 0 0 0 5px DimGrey;
+    box-shadow: 0 0 0 5px rgb(255, 255, 255);
 }
 
 .btn, #reset, #rand {
